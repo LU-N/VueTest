@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html xmlns:v-bind="http://www.w3.org/1999/xhtml">
+
+<head>
+    <meta charset="utf-8"/>
+    <title>v-model</title>
+    <script src="js/vuejs-2.5.16.js"></script>
+</head>
+
+<body>
+<div id="app">
+    <font size="5" v-bind:color="ys1">Pro</font></div></br>
+    <font size="5" :color="ys1">Pro</font>
+    <hr>
+    <a v-bind={href:"http://www.itcast.cn/index/"+id}>itcast</a>
+</div>
+</body>
+<script>
+    //view model
+    new Vue({
+        el: "#app",
+        data: {
+            ys1: "red",
+            ys2: "green",
+            id: 1
+        }
+    });
+</script>
+</html>

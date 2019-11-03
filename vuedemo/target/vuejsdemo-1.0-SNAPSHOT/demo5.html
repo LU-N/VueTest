@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html xmlns:v-on="http://www.w3.org/1999/xhtml">
+
+<head>
+    <meta charset="utf-8"/>
+    <title>v-on:事件修饰符</title>
+
+    <script src="js/vuejs-2.5.16.js"></script>
+</head>
+
+<body>
+<div id="app">
+    <form v-on:submit.prevent action="https://www.baidu.com">
+        <input type="submit" value="Go">
+    </form>
+
+    <div v-on:click="fun">
+        <a v-on:click.stop href="https://www.baidu.com">baidu</a>
+    </div>
+</div>
+</body>
+<script>
+    //view model
+    new Vue({
+        el: "#app",
+        methods: {
+            fun: function () {
+                alert("he")
+            }
+        }
+    });
+</script>
+</html>

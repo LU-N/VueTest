@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html xmlns:v-bind="http://www.w3.org/1999/xhtml">
+	<head>
+		<meta charset="utf-8" />
+		<title>v-text与v-html在v-bind上的使用</title>
+		<script src="js/vuejs-2.5.16.js"></script>
+	</head>
+	<body>
+		<div id="app">
+            <div v-text="message"  v-bind:color="ys1"></div>
+            <div v-html="message" v-bind:color="ys2"></div>
+		</div>
+	</body>
+	<script>
+		//view model
+		new Vue ({
+            el:"#app",
+            data: {
+                ys1: "red",
+                ys2: "green",
+                message:"<h1>Pro</h1>"
+            }
+        })
+	</script>
+</html>
